@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Fruit Store</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</head>
+
+<body onload="showSection('home')">
+
+<header>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('fruits')">Fruits</a>
+    <a onclick="showSection('buy')">Buy</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('contact')">Contact</a>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <h1>Welcome to Fresh Fruit Store</h1>
+    <p>Fresh • Healthy • Organic • Seasonal Fruits</p>
+</section>
+
+<!-- FRUITS -->
+<section id="fruits">
+    <h1>🍎 Our Fresh Fruits</h1>
+
+    <div class="menu-container">
+
+        <div class="card">
+            <img src="apple.jpeg">
+            <h3>Apple</h3>
+            <p>₹120 / kg</p>
+        </div>
+
+        <div class="card">
+            <img src="banana.jpeg">
+            <h3>Banana</h3>
+            <p>₹40 / dozen</p>
+        </div>
+
+        <div class="card">
+            <img src="orange.jpeg">
+            <h3>Orange</h3>
+            <p>₹90 / kg</p>
+        </div>
+
+        <div class="card">
+            <img src="grapes.jpeg">
+            <h3>Grapes</h3>
+            <p>₹80 / kg</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- BUY -->
+<section id="buy">
+    <h1>🛒 Buy Fresh Fruits</h1>
+
+    <form class="order-box">
+        <label>Select Fruit</label>
+        <select>
+            <option>Apple - ₹120/kg</option>
+            <option>Banana - ₹40/dozen</option>
+            <option>Orange - ₹90/kg</option>
+            <option>Grapes - ₹80/kg</option>
+        </select>
+
+        <label>Quantity</label>
+        <input type="number" min="1" value="1">
+
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter name">
+
+        <label>Address</label>
+        <textarea placeholder="Enter delivery address"></textarea>
+
+        <button>Place Order</button>
+    </form>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About Fresh Fruit Store</h1>
+    <p>
+        We provide 100% fresh, organic, and chemical-free fruits directly from farms.
+        Our goal is to bring healthy food to your doorstep.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h1>Contact Us</h1>
+    <p>📞 +91 98765 43210</p>
+    <p>📧 freshfruits@gmail.com</p>
+    <p>📍 Bengaluru, India</p>
+</section>
+
+</body>
+</html>
